@@ -1,6 +1,6 @@
 # :red_circle: IMPORTANT NOTE :red_circle:
 
-This branch contains some fixes to support Slim 2 and PHP 8.1 in my legacy apps. I have not tested the entire fremework, so there is no guarantee that it will work for you. 
+This branch contains some fixes to support Slim 2 and PHP 8.1 in my legacy apps. I have not tested the entire framework, so there is no guarantee that it will work for you. 
 
 https://github.com/Laiter/Slim-2-php-8.1
 
