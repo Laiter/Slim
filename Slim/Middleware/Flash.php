@@ -2,7 +2,7 @@
 /**
  * Slim - a micro PHP 5 framework
  *
- * @author      Josh Lockhart <info@slimframework.com>
+ * @author      Vladislav Sarychev <https://github.com/Laiter/Slim-2-php-8.1>
  * @copyright   2011-2017 Josh Lockhart
  * @link        http://www.slimframework.com
  * @license     http://www.slimframework.com/license
@@ -155,6 +155,7 @@ class Flash extends \Slim\Middleware implements \ArrayAccess, \IteratorAggregate
     /**
      * Array Access: Offset Exists
      */
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         $messages = $this->getMessages();
@@ -165,6 +166,7 @@ class Flash extends \Slim\Middleware implements \ArrayAccess, \IteratorAggregate
     /**
      * Array Access: Offset Get
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         $messages = $this->getMessages();
@@ -175,6 +177,7 @@ class Flash extends \Slim\Middleware implements \ArrayAccess, \IteratorAggregate
     /**
      * Array Access: Offset Set
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         $this->now($offset, $value);
@@ -183,6 +186,7 @@ class Flash extends \Slim\Middleware implements \ArrayAccess, \IteratorAggregate
     /**
      * Array Access: Offset Unset
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->messages['prev'][$offset], $this->messages['now'][$offset]);
@@ -192,6 +196,7 @@ class Flash extends \Slim\Middleware implements \ArrayAccess, \IteratorAggregate
      * Iterator Aggregate: Get Iterator
      * @return \ArrayIterator
      */
+    #[\ReturnTypeWillChange]
     public function getIterator()
     {
         $messages = $this->getMessages();
@@ -202,6 +207,7 @@ class Flash extends \Slim\Middleware implements \ArrayAccess, \IteratorAggregate
     /**
      * Countable: Count
      */
+    #[\ReturnTypeWillChange]
     public function count()
     {
         return count($this->getMessages());

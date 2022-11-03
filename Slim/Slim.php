@@ -2,7 +2,7 @@
 /**
  * Slim - a micro PHP 5 framework
  *
- * @author      Josh Lockhart <info@slimframework.com>
+ * @author      Vladislav Sarychev <https://github.com/Laiter/Slim-2-php-8.1>
  * @copyright   2011-2017 Josh Lockhart
  * @link        http://www.slimframework.com
  * @license     http://www.slimframework.com/license
@@ -31,6 +31,9 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 namespace Slim;
+
+// (Vladislav Sarychev) Fix to support PHP 8.0+
+require_once 'FixPhp8GetMagicQuotesGpc.php';
 
 // Ensure mcrypt constants are defined even if mcrypt extension is not loaded
 if (!defined('MCRYPT_MODE_CBC')) define('MCRYPT_MODE_CBC', 0);

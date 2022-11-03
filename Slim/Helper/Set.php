@@ -2,7 +2,7 @@
 /**
  * Slim - a micro PHP 5 framework
  *
- * @author      Josh Lockhart <info@slimframework.com>
+ * @author      Vladislav Sarychev <https://github.com/Laiter/Slim-2-php-8.1>
  * @copyright   2011-2017 Josh Lockhart
  * @link        http://www.slimframework.com
  * @license     http://www.slimframework.com/license
@@ -174,22 +174,22 @@ class Set implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Array Access
      */
-
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return $this->has($offset);
     }
-
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return $this->get($offset);
     }
-
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         $this->set($offset, $value);
     }
-
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         $this->remove($offset);
@@ -198,7 +198,7 @@ class Set implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * Countable
      */
-
+    #[\ReturnTypeWillChange]
     public function count()
     {
         return count($this->data);
@@ -207,7 +207,7 @@ class Set implements \ArrayAccess, \Countable, \IteratorAggregate
     /**
      * IteratorAggregate
      */
-
+    #[\ReturnTypeWillChange]
     public function getIterator()
     {
         return new \ArrayIterator($this->data);
